@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 //Please type the name of the file you want to edit here:
 // const OnShapefileName = 'Extrude8';
-const OnShapefileName = 'Extrude9';
+const OnShapefileName = 'Extrude8 - Copy';
 
 
 
@@ -25,7 +25,14 @@ async function launchBrowserAndNavigateToDocument() {
     await newPage.type('input[name="email"].form-control', process.env.EMAIL);
     console.log('Typed email successfully.');
 
+    await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds
     await newPage.type('input[name="password"].form-control', process.env.PASSWORD);
+    console.log('Password:', process.env.EMAIL);
+
+    console.log('Password:', process.env.PASSWORD);
+    console.log('Password Typed: ',)
+    // await newPage.type('input[name="password"].form-control', 'ElonMusk2050#');
+    await new Promise(resolve => setTimeout(resolve, 5000)); // Wait for 5 seconds
     console.log('Typed password successfully.');
 
     await newPage.click('button.btn.btn-primary.os-signin-button');
