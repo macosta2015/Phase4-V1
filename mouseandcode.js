@@ -923,7 +923,6 @@ require('events').EventEmitter.defaultMaxListeners = 20; // Set the maximum numb
         await new Promise(resolve => setTimeout(resolve, 3000));
 
         console.log('Script completed successfully. thank you for your help!!')
-        console.log('Life is good when you work hard')
 
 
     } catch (error) {
